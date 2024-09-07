@@ -1,0 +1,20 @@
+﻿@model ControleAcademico1.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Erro";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">Ocorreu um Erro</h1>
+        <p class="lead">Houve um problema ao processar sua solicitação.</p>
+        <div>
+            <h4>Detalhes do Erro:</h4>
+            <pre>@Model.RequestId</pre>
+            @if (Model.RequestId != null)
+            {
+                <p>Se o problema persistir, por favor, envie o código de erro <code>@Model.RequestId</code> para o suporte.</p>
+            }
+        </div>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary mt-4">Voltar para a Página Inicial</a>
+    </div>
+</div>

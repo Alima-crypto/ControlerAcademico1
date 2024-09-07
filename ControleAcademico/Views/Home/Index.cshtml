@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Página Principal";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo ao Controle Acadêmico!</h1>
+    <p class="lead">Gerencie seus autores, orientadores e trabalhos de forma eficiente.</p>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/authors.jpg" class="card-img-top" alt="Autores">
+                <div class="card-body">
+                    <h5 class="card-title">Autores</h5>
+                    <p class="card-text">Visualize, adicione e edite informações sobre autores.</p>
+                    <a href="@Url.Action("Index", "Autores")" class="btn btn-primary">Gerenciar Autores</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/advisors.jpg" class="card-img-top" alt="Orientadores">
+                <div class="card-body">
+                    <h5 class="card-title">Orientadores</h5>
+                    <p class="card-text">Gerencie os dados dos orientadores acadêmicos.</p>
+                    <a href="@Url.Action("Index", "Orientadores")" class="btn btn-primary">Gerenciar Orientadores</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/works.jpg" class="card-img-top" alt="Trabalhos">
+                <div class="card-body">
+                    <h5 class="card-title">Trabalhos</h5>
+                    <p class="card-text">Administre os trabalhos acadêmicos realizados.</p>
+                    <a href="@Url.Action("Index", "Trabalhos")" class="btn btn-primary">Gerenciar Trabalhos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

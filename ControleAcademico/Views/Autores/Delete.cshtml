@@ -1,0 +1,22 @@
+﻿@model ControleAcademico1.Models.Autor
+@{
+    ViewData["Title"] = "Excluir Autor";
+}
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h2 class="text-center">Tem certeza de que deseja excluir este autor?</h2>
+            <div class="mt-4">
+                <h4>@Model.Nome</h4>
+                <p><strong>Curso:</strong> @Model.Curso</p>
+            </div>
+            <form asp-action="DeleteConfirmed" method="post" class="mt-4">
+                <input type="hidden" asp-for="Id" />
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-danger">Excluir</button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿@model ControleAcademico1.Models.Trabalho
+@{
+    ViewData["Title"] = "Detalhes do Trabalho";
+}
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h2>@Model.Titulo</h2>
+            <p><strong>Tipo:</strong> @Model.Tipo</p>
+            <p><strong>Autor:</strong> @Model.Autor.Nome</p>
+            <p><strong>Orientador:</strong> @Model.Orientador.Nome</p>
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>

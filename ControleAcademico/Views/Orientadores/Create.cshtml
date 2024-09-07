@@ -1,0 +1,27 @@
+﻿@model ControleAcademico1.Models.Orientadores
+@{
+    ViewData["Title"] = "Criar Novo Orientadores";
+}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center">@ViewData["Title"]</h2>
+            <form asp-action="Create" class="shadow-lg p-4 bg-light rounded">
+                <div class="form-group mb-3">
+                    <label asp-for="Nome" class="form-label"></label>
+                    <input asp-for="Nome" class="form-control" placeholder="Digite o nome do orientador" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Curso" class="form-label"></label>
+                    <input asp-for="Curso" class="form-control" placeholder="Digite o curso do orientador" />
+                    <span asp-validation-for="Curso" class="text-danger"></span>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Criar Orientador</button>
+                    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿ @model ControleAcademico1.Models.Trabalho
+@{
+    ViewData["Title"] = "Criar Novo Trabalho";
+}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center">@ViewData["Title"]</h2>
+            <form asp-action="Create" class="shadow-lg p-4 bg-light rounded">
+                <div class="form-group mb-3">
+                    <label asp-for="Titulo" class="form-label"></label>
+                    <input asp-for="Titulo" class="form-control" placeholder="Digite o título do trabalho" />
+                    <span asp-validation-for="Titulo" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Tipo" class="form-label"></label>
+                    <input asp-for="Tipo" class="form-control" placeholder="Digite o tipo do trabalho (TCC, Artigo, etc.)" />
+                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="AutorId" class="form-label">Autor</label>
+                    <select asp-for="AutorId" asp-items="ViewBag.AutorId" class="form-select">
+                        <option value="">Selecione o autor</option>
+                    </select>
+                    <span asp-validation-for="AutorId" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="OrientadorId" class="form-label">Orientador</label>
+                    <select asp-for="OrientadorId" asp-items="ViewBag.OrientadorId" class="form-select">
+                        <option value="">Selecione o orientador</option>
+                    </select>
+                    <span asp-validation-for="OrientadorId" class="text-danger"></span>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Criar Trabalho</button>
+                    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
